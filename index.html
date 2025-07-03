@@ -1,23 +1,183 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Landing Page de Pruebas</title>
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desnews</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font-family: sans-serif;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        background: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background: #111;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      nav {
+        background: #222;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem 0;
+      }
+
+      nav a {
+        color: #fff;
+        margin: 0 1rem;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      .hero {
+        background: #a3ffa5;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .content {
+        flex: 1;
+        padding: 2rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 240px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+        flex: 1;
+      }
+
+      .card.ad {
+        padding: 0;
+        align-items: stretch;
+        justify-content: stretch;
+      }
+
+      .footer {
+        background: #111;
+        color: #ccc;
+        text-align: center;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>DesNews</h1>
+      <p>Desinformando localmente</p>
+    </header>
+
+    <nav>
+      <a href="#">Homecita</a>
+      <a href="#">NONEWS</a>
+      <a href="#">No nos contactes</a>
+      <a href="#">¿Economía?</a>
+      <a href="#">Desánimos</a>
+    </nav>
+
+    <section class="hero">
+      <h1>Tapados de laburo</h1>
+      <p>Todo lo que necesitás saber, buscalo en otro lado</p>
+    </section>
+
+    <main class="content">
+      <div id="card-1" class="card">
+        <img src="https://images.unsplash.com/photo-1486286701208-1d58e9338013?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Argentina gana en penales" style="width:100%; border-radius:6px 6px 0 0; margin-bottom: 1rem;">
+        <h2>Argentina gana mundial de canicas</h2>
+        <p>La selección nacional de canicas venció a su rival trans en un partido intenso que terminó en empate. La definición por canicas fue infartante.</p>
+      </div>
+
+      <div id="card-2" class="card">
+        <img src="https://images.unsplash.com/photo-1623118176012-9b0c6fa0712d?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sube el dólar" style="width:100%; border-radius:6px 6px 0 0; margin-bottom: 1rem;">
+        <h2>Sube el dólar comedia en Egipto</h2>
+        <p>El tipo de cambio alcanzó un nuevo récord, generando incertidumbre .</p>
+      </div>
+
+      <div id="card-3" class="card">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Reforma educativa" style="width:100%; border-radius:6px 6px 0 0; margin-bottom: 1rem;">
+        <h2>Reformas</h2>
+        <p>El nuevo proyecto de ley busca actualizar los contenidos curriculares en las batallas de gallos.</p>
+      </div>
+
+      <div id="card-4" class="card">
+        <img src="https://plus.unsplash.com/premium_photo-1697729901052-fe8900e24993?q=80&amp;w=2666&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Concierto en el Obelisco" style="width:100%; border-radius:6px 6px 0 0; margin-bottom: 1rem;">
+        <h2>Balas gratis</h2>
+        <p>Este fin de semana habrá una entrega de proyectiles gratis en congreso</p>
+      </div>
+
+      <div id="offer-container" class="ad">
+        <div class="s1-client-offer" id="offerS1popup" data-render-target="popup">
+        <!-- ACA VA LA OFFER -->
+        <script type='text/javascript' src='https://cert.s1gateway.com/offers/api/public/script?cpg_id=295069'></script>
+        </div>
+      </div>
+
+      <div id="card-6" class="card">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&amp;w=2573&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ley de alquileres" style="width:100%; border-radius:6px 6px 0 0; margin-bottom: 1rem;">
+        <h2>Avances en la Ley de Alquileres</h2>
+        <p>El Senado aprobó cambios en el régimen de comidas del presidente: comerá papas fritas por las noches.</p>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <script type="text/javascript" src="https://cert.s1gateway.com/pe/mhKSmfMFmQYy"></script>
+      <p>© 2025 DesNews.</p>
+    </footer>
   
-</head>
-<body>
- 
-  <div>
-    <h1>Bienvenido a la landing de pruebas</h1>
-    <p>Y? que pasaaaaaaa</p>
-    </div>
 
   
+  
 
+  <script type="text/javascript" src="https://cert.s1gateway.com/offers/api/public/script?cpg_id=295069"></script>
 
- </div>
-  <p>Esta es una página para poder ver las malditas ofertasssssss.</p>
-
-</body>
-</html>
+</body><!-- <script type='text/javascript' src='https://desa.s1gateway.com/offers/api/public/script?cpg_id=1469130'></script> --><!-- <script type='text/javascript' src='https://desa.s1gateway.com/offers/api/public/script?cpg_id=10001'></script> --></html>
