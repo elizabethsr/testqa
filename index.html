@@ -1,209 +1,296 @@
-<html lang="es"><head>
-
-</script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desnews</title>
+    <title>Desnews - Esculturas Absurdas</title>
     
     <style>
+      /* --- Estilos Neo-Brutalistas Radicales --- */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      html,
       body {
-        height: 100%;
-        font-family: sans-serif;
+        background: #00ffaa; /* Fondo verde neón súper estridente */
+        font-family: 'Impact', 'Arial Black', sans-serif;
+        color: #000;
+        overflow-x: hidden;
+        padding: 15px;
       }
 
-      body {
-        display: flex;
-        flex-direction: column;
-        background: #f4f4f4;
-        color: #333;
-      }
-
+      /* --- Header Asimétrico Rompe-Reglas --- */
       header {
-        background: #111;
+        background: #ff0055; /* Magenta vibrante */
         color: #fff;
-        padding: 1rem;
+        padding: 3rem 1.5rem;
         text-align: center;
+        border: 6px solid #000;
+        box-shadow: 12px 12px 0px #000;
+        transform: rotate(-1.5deg);
+        margin-bottom: 3rem;
+        position: relative;
       }
 
+      header h1 {
+        font-size: 5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -3px;
+        text-shadow: 5px 5px 0px #000;
+      }
+
+      header p {
+        font-family: 'Courier New', monospace;
+        font-size: 1.6rem;
+        background: #fff;
+        color: #000;
+        display: inline-block;
+        padding: 8px 20px;
+        margin-top: 15px;
+        border: 3px solid #000;
+        transform: rotate(3deg);
+        font-weight: bold;
+      }
+
+      /* --- Navegación Caótica (Estilo Collage) --- */
       nav {
-        background: #222;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        padding: 0.5rem 0;
+        gap: 20px;
+        margin-bottom: 4rem;
       }
 
       nav a {
-        color: #fff;
-        margin: 0 1rem;
+        background: #ffff00; /* Amarillo puro */
+        color: #000;
+        padding: 12px 25px;
         text-decoration: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        border: 4px solid #000;
+        box-shadow: 6px 6px 0px #000;
+        transition: all 0.1s ease;
+      }
+
+      nav a:nth-child(even) {
+        background: #ff9900;
+        transform: rotate(-3deg);
+      }
+      
+      nav a:nth-child(3) {
+        background: #ff00ff;
+        color: #fff;
+        transform: rotate(2deg);
       }
 
       nav a:hover {
-        text-decoration: underline;
+        transform: translate(-6px, -6px) rotate(0deg);
+        box-shadow: 12px 12px 0px #000;
+        background: #fff;
+        color: #000;
       }
 
+      /* --- Sección Hero Tridimensional Sólida --- */
       .hero {
-        background: #f2a3ff;
-        text-align: center;
-        padding: 2rem 1rem;
+        background: #0022ff; /* Azul eléctrico */
+        color: #fff;
+        text-align: left;
+        padding: 4rem 2rem;
+        border: 6px solid #000;
+        box-shadow: -15px 15px 0px #000;
+        margin: 0 auto 4rem auto;
+        max-width: 95%;
+        transform: rotate(0.5deg);
       }
 
       .hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
+        font-size: 4rem;
+        text-transform: uppercase;
+        line-height: 0.95;
+        margin-bottom: 1.5rem;
+        letter-spacing: -1px;
       }
 
       .hero p {
-        font-size: 1.2rem;
+        font-family: 'Courier New', monospace;
+        font-size: 1.5rem;
+        background: #ff0055;
+        color: #fff;
+        display: inline-block;
+        padding: 12px;
+        border: 3px solid #000;
+        font-weight: bold;
       }
 
+      /* --- Contenedor Grid Desalineado --- */
       .content {
-        flex: 1;
-        padding: 2rem 1rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
-        max-width: 1200px;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 3.5rem;
+        max-width: 1400px;
         margin: 0 auto;
+        padding: 1rem;
       }
 
+      /* --- Tarjetas Escultóricas --- */
       .card {
         background: #fff;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        padding: 1rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        border: 5px solid #000;
+        padding: 2rem;
+        box-shadow: 12px 12px 0px #000;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%;
-        min-height: 240px;
+        min-height: 450px;
         position: relative;
-        overflow: hidden;
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      /* Rotaciones asimétricas individuales */
+      #card-1 { transform: rotate(-2deg); background: #fff; }
+      #card-2 { transform: rotate(1.5deg); background: #ffffcc; }
+      #card-3 { transform: rotate(-1deg); background: #ffccff; }
+      #card-4 { transform: rotate(2.5deg); background: #ccffff; }
+      #card-5 { transform: rotate(-2.5deg); background: #ffe6cc; }
+      #offer-container { transform: rotate(1deg); }
+
+      .card:hover {
+        transform: rotate(0deg) scale(1.05) !important;
+        box-shadow: 18px 18px 0px #ff0055;
+        z-index: 10;
+      }
+
+      .card img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border: 4px solid #000;
+        margin-bottom: 1.5rem;
+        filter: contrast(110%) saturate(120%);
       }
 
       .card h2 {
-        font-size: 1.3rem;
-        margin-bottom: 0.5rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        background: #000;
+        color: #fff;
+        padding: 8px;
+        line-height: 1.1;
+        letter-spacing: -1px;
       }
 
       .card p {
-        font-size: 0.95rem;
-        flex: 1;
+        font-family: 'Courier New', monospace;
+        font-size: 1.05rem;
+        line-height: 1.4;
+        font-weight: bold;
+        color: #111;
       }
 
+      /* Publicidad Brutal */
       .card.ad {
-        padding: 0;
-        align-items: stretch;
-        justify-content: stretch;
-        overflow: hidden;
-        position: relative;
+        background: #000;
+        color: #ffff00;
+        border: 6px dashed #ffff00;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
       }
 
+      /* --- Footer Anti-Diseño --- */
       .footer {
-        background: #111;
-        color: #ccc;
+        background: #000;
+        color: #fff;
         text-align: center;
-        padding: 1rem;
+        padding: 4rem 1rem;
+        margin-top: 5rem;
+        border-top: 10px solid #ff0055;
+      }
+      
+      .footer p {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
       }
     </style>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TTJ3SMGM');</script>
-<!-- End Google Tag Manager -->
-  </head>
-  <body>
-      <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTJ3SMGM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TTJ3SMGM');</script>
+    </head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTJ3SMGM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
       <h1>DesNews</h1>
-      <p>Desinformando localmente</p>
+      <p>Escultura Abstracta y Humo Conceptual</p>
     </header>
 
     <nav>
-      <a href="#">Homecita</a>
-      <a href="#">NONEWS</a>
-      <a href="#">No nos contactes</a>
-      <a href="#">¿Economía?</a>
-      <a href="#">Desánimos</a>
+      <a href="#">Galería Inexistente</a>
+      <a href="#">No-Esculturas</a>
+      <a href="#">No nos cotices</a>
+      <a href="#">¿Mercado de Arte?</a>
+      <a href="#">Desánimos Creativos</a>
     </nav>
 
     <section class="hero">
-      <h1>Tapados de laburo</h1>
-      <p>Todo lo que necesitás saber, buscalo en otro lado</p>
+      <h1>Arte en Estado Gaseoso y Esculturas de Humo</h1>
+      <p>Todo lo que necesitás saber sobre el vacío absoluto, buscalo acá.</p>
     </section>
 
     <main class="content">
       <div id="card-1" class="card">
-        <img src="https://images.unsplash.com/photo-1687499466496-590c45852352?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Argentina mundial canicas" style="width:100%; border-radius:6px 6px 0 0; margin-bottom: 1rem;">
-        <h2>Argentina gana mundial de canicas</h2>
-        <p>La selección nacional de canicas venció a su rival trans en un partido intenso que terminó en empate. La definición por canicas fue infartante.</p>
+        <img src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=1000&auto=format&fit=crop" alt="Escultura que se fuma">
+        <h2>¿Esculturas que se fuman? ¡Literalmente!</h2>
+        <p>La artista conceptual "La Chimenea" crea intrincadas figuras de humo que solo existen mientras alguien las inhala. Sus obras son una metáfora de la fugacidad.</p>
       </div>
 
       <div id="card-2" class="card">
-        <img src="https://images.unsplash.com/photo-1623118176012-9b0c6fa0712d?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sube el dólar" style="width:100%; border-radius:6px 6px 0 0; margin-bottom: 1rem;">
-        <h2>Sube el dólar comedia en Egipto</h2>
-        <p>El tipo de cambio alcanzó un nuevo récord, generando incertidumbre .</p>
+        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1000&auto=format&fit=crop" alt="El artista que esculpe el viento">
+        <h2>El artista que esculpe el viento</h2>
+        <p>Utilizando potentes ventiladores y técnicas secretas, "El Tornado" crea formas invisibles que solo se perciben a través del tacto o el oído desprotegido.</p>
       </div>
 
       <div id="card-3" class="card">
-        <img src="https://unsplash.com/es/fotos/un-grupo-de-pajaros-parados-sobre-un-suelo-de-cemento-ZZFweoFfN-4" alt="Reforma educativa gallos" style="width:100%; border-radius:6px 6px 0 0; margin-bottom: 1rem;">
-        <h2>Reformas</h2>
-        <p>El nuevo proyecto de ley busca actualizar los contenidos curriculares en las batallas de gallos.</p>
+        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000&auto=format&fit=crop" alt="Exposiciones gaseosas">
+        <h2>Exposiciones para dudar de tu cordura</h2>
+        <p>En "El Palacio del Humo", los visitantes se sumergen en una nube densa de colores que cambia de forma y olor constantemente. ¿Es arte o niebla de boliche?</p>
       </div>
 
       <div id="card-4" class="card">
-        <img src="https://unsplash.com/es/fotos/cuentas-redondas-marrones-y-negras-DTRSkEUqSds" alt="balas en el Obelisco" style="width:100%; border-radius:6px 6px 0 0; margin-bottom: 1rem;">
-        <h2>Balas gratis</h2>
-        <p>Este fin de semana habrá una entrega de proyectiles gratis en congreso</p>
+        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1000&auto=format&fit=crop" alt="¿Arte o aire caliente?">
+        <h2>¿Arte o simplemente aire caliente?</h2>
+        <p>Los críticos no se ponen de acuerdo sobre si el arte gaseoso es genialidad o una tomada de pelo histórica. Lo cierto es que cotiza en millones de dólares inexistentes.</p>
       </div>
 
-      <div id="offer-container" class="ad">
+      <div id="offer-container" class="card ad">
+        <div style="padding: 10px;">
+            <h3 style="font-size: 2.2rem; color: #ff0055; background: #fff; padding: 10px; border: 4px solid #000; transform: rotate(-2deg);">¡MONUMENTAL PUBLICIDAD!</h3>
+            <p style="margin-top: 15px; color: #fff; font-family: sans-serif;">Inyección algorítmica del script publicitario:</p>
+        </div>
         <div class="s1-client-offer" id="offerS1popup" data-render-target="popup">
-        <!-- ACA VA LA OFFER -->
             <script type='text/javascript' src='https://cert.s1gateway.com/offers/api/public/script?cpg_id=292785'></script>
-      <!--  <script type='text/javascript' src='https://cert.s1gateway.com/offers/api/public/script?cpg_id=295069'></script> -->
         </div>
       </div> 
 
       <div id="card-5" class="card">
-        <img src="https://unsplash.com/es/fotos/un-plato-de-papas-fritas-cayendo-al-aire-BkWowglS_Uk" alt="Ley de alquileres" style="width:100%; border-radius:6px 6px 0 0; margin-bottom: 1rem;">
-        <h2>Avances en la Ley de Alimentos</h2>
-        <p>El Senado aprobó cambios en el régimen de comidas del presidente: comerá papas fritas por las noches.</p>
+        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1000&auto=format&fit=crop" alt="Monumento a la papa frita">
+        <h2>Avances: Monumento a la Papa Frita</h2>
+        <p>El gremio de escultores hiperrealistas inauguró una réplica gigante y aceitosa de una papa frita en la plaza central. El presidente prometió vigilarla de noche.</p>
       </div>
-
-        <!--<div id="card-6" class="card">
-        <div class="s1-client-offer" id="offerS1nopopup" data-render-target="nopopup">
-      
-        <script type='text/javascript' src='https://cert.s1gateway.com/offers/api/public/script?cpg_id=295069'></script>
-      </div>
-        </div> -->
-       
-
     </main>
 
     <footer class="footer">
         <script type="text/javascript" src="https://cert.s1gateway.com/pe/N8cg9bNnb5hk"></script>
-     <!-- <script type="text/javascript" src="https://cert.s1gateway.com/pe/mhKSmfMFmQYy"></script> -->
-      <p>© 2025 DesNews.</p>
+        <p>© 2026 DesNews. Esculpido de manera caótica.</p>
     </footer>
-  
-
-  
-  
-
- 
-
 </body>
+</html>
